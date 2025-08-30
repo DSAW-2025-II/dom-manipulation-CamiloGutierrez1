@@ -4,10 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/styles.css" />
-    <title>Document</title>
+    <title>Ready, Set, Done</title>
   </head>
   <body>
-    <h1>Mi TODO list</h1>
+    
+    <div class ="container">
+      
+      <header class ="header">
+        
+        <div>
+          <h1>Organize !!! Task by task </h1>
+          <p>Your life more easily</p>
+          <img src="/dom-manipulation-CamiloGutierrez1/Pictures/ImgToDo.png" alt="Image of Tasks">
+          
+        </div>
+
+      </header>
+
+      <h2>Do you feel like you have too many ideas and don't know where to start? </h2>
+
+      <div class="info-section">
+        <p><strong>Here, you can capture your tasks, organize them, and mark them as completed simply and stress-free.<br>
+          Focus on what really matters: getting things done.</strong></p>  
+        <ul>
+          <li>✅ Easily add and edit tasks in seconds, no matter where you are.</li>
+          <li>✅ Mark tasks as done with a tap and enjoy the rewarding feeling of accomplishment.</li>
+          <li>✅ Keep your digital and personal life organized effortlessly.</li>
+        </ul>
+        
+      </div>
+      
+      <div class = "input-container">
+        <input type="text" class ="task-input" placeholder="Enter a new task">
+        <button class="add-task-button">Add Task</button>
+        <ul class="tasks-list" id ="tasksList">
+          <li class ="no-tasks-message">
+            <p>📝 You have no pending tasks.<br>
+                  Add a new task to get started!
+            </p>
+          </li>
+        </ul>
+      </div>
+    
+    </div>
+    
     <script src="scripts/script.js"></script>
   </body>
-</html>
+</html> 
