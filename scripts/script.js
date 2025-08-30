@@ -2,16 +2,16 @@
 let tasks = [];
 let taskIdCounter = 0;
 
-// Dom Interaction Elements - CORREGIDO: usar las clases correctas
-const taskInput = document.querySelector(".task-input");
-const addButton = document.querySelector(".add-task-button");
-const tasksList = document.getElementById("tasksList");
+// Dom interaction Elements
+const taskInput = document.querySelector(".task-input");// The user input , enter a new task
+const addButton = document.querySelector(".add-task-button"); // The button to add a new task
+const tasksList = document.getElementById("tasksList");// The list where tasks will be shown
 
 //Function to add a new task, obtain the value from input and check if it's not empty.
 function addTask(){
-    const task = taskInput.value.trim();
+    const task = taskInput.value.trim(); // take the value of the input and remove extra spaces
     if (task === ''){
-        alert("Please enter a valid task.");
+        alert("Please enter a valid task.");// Alert message if the input is empty
         return;
     }
         
@@ -21,7 +21,7 @@ function addTask(){
     //Methods to add, clean input and show the updated list
     tasks.push(newTask);
     taskInput.value = "";
-    displayTasks(); // CORREGIDO: usar displayTasks() no renderTasks()
+    displayTasks(); 
 }
 
 // Function to delete a task 
@@ -38,11 +38,11 @@ function toggleTask(taskId){
     const task = tasks.find(task => task.id === taskId);
     if (task){
         task.completed = !task.completed;
-        displayTasks(); // CORREGIDO: usar displayTasks() no renderTasks()
+        displayTasks(); 
     }
 }
 
-// Function to show the tasks 
+//Function to show the tasks 
 function displayTasks(){
     tasksList.innerHTML = ""; // Clear the current list 
 
@@ -72,7 +72,7 @@ function displayTasks(){
             <button class="delete-btn" 
                      onclick="deleteTask(${task.id})"
                     title="Eliminar tarea">
-                ×
+                X
             </button>
         `;
         tasksList.appendChild(taskItem);
